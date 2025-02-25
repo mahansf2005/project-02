@@ -1,0 +1,71 @@
+:root {
+  @media (max-width: 570px) {
+    .div01 {
+      padding: 8px;
+    }
+  }
+  @media (min-width: 1370px) {
+    #rez {
+        max-width: 225px !important;
+    }
+  }
+  @media (max-width: 1369px) and (min-width: 1000px) {
+    #rez {
+      max-width: 225px !important;
+    }
+  }
+  @media (max-width: 999px) and (min-width: 700px) {
+    #rez {
+      max-width: 300px !important;
+    }
+    #nav-contact , #nav-profile ,#nav-home {
+        font-size: 20px;
+    }
+    #rez02 p{
+        width: 190px !important;
+        font-size: 16px !important;
+    }
+    #rez02 h3{
+        width: 190px !important;
+        font-size: 20px;
+    }
+  }
+  @media (max-width: 699px) and (min-width: 450px) {
+    #rez {
+      max-width: 200px !important;
+    }
+    #nav-contact , #nav-profile ,#nav-home {
+        font-size: 18px;
+    }
+    #nav-home-tab , #nav-profile-tab , #nav-contact-tab{
+        width: 50px;
+    }
+    #rez02 p{
+        width: 150px !important;
+        font-size: 16px !important;
+    }
+    #rez02 h3{
+        width: 150px !important;
+        font-size: 20px;
+    }
+  }
+  @media (max-width: 449px) and (min-width: 375px) {
+    #rez {
+      max-width: 150px !important;
+    }
+    #nav-contact , #nav-profile ,#nav-home {
+        font-size: 18px;
+    }
+    #nav-home-tab , #nav-profile-tab , #nav-contact-tab{
+        width: 50px;
+    }
+    #rez02 p{
+        width: 120px !important;
+        font-size: 12px !important;
+    }
+    #rez02 h3{
+        width: 120px !important;
+        font-size: 15px;
+    }
+  }
+}

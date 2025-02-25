@@ -1,3 +1,4 @@
+@import url(/lib/css/respansive.css);
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +8,28 @@
     max-width: 100%;
 
 }
-.nav-link:active{
-
+#rez02{
+    width: 200px !important;
+}
+#rez02 p{
+    width: 200px !important;
+    font-size: 16px !important;
+}
+#rez02 h3{
+    width: 200px !important;
+    font-size: 20px;
+}
+#rez01{
+    height: 1000px;
+}
+#rez{
+   width: 1000px;
+   height: 100vh;
+}
+#rez div{
+    width: 100%;
+    
+}
+body{
+    font-family: 'Vazirmatn';
 }

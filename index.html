@@ -4,33 +4,173 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Charisma</title>
-    <link rel="stylesheet" href="/Project-02/lib/css/bootstrap.rtl.min.css" />
-    <link rel="stylesheet" href="/Project-02/lib/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/Project-02/lib/css/main.css" />
+    <link rel="stylesheet" href="/lib/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/lib/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/css/main.css" />
+    <link rel="shortcut icon" href="/lib/img/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav class="navbar bg-body-secondary justify-content-md-between border-bottom border-black border-2">
+    <nav
+      class="navbar bg-body-secondary justify-content-md-between border-bottom border-black border-2"
+    >
       <div class="container m-0">
-        <a class="navbar-brand " href="#">
-          <img src="/Project-02/lib/img/logo.png" alt="profile-logo" width="50" />
+        <a class="navbar-brand" href="#">
+          <img src="/lib/img/logo.png" alt="profile-logo" width="50" />
         </a>
         <a class="navbar-brand" href="#">
-          <img src="/Project-02/lib/img/profile.webp" alt="profile-logo" width="80" />
+          <img src="/lib/img/profile.webp" alt="profile-logo" width="80" />
         </a>
       </div>
     </nav>
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+    <div class="d-flex " style="height: 100vh;">
+      <div
+        class="container-md bg-body-secondary d-flex flex-column justify-content-between"
+        id="rez"
+      >
+        <div id="rez01">
+          <ul>
+            <li>سطح یک</li>
+            <li>سطح یک</li>
+            <li>سطح یک</li>
+            <ul>
+              <li>سطح دو</li>
+              <li>سطح دو</li>
+              <li>سطح دو</li>
+            </ul>
+          </ul>
+          <ul>
+            <li>سطح یک</li>
+            <li>سطح یک</li>
+            <li>سطح یک</li>
+            <ul>
+              <li>سطح دو</li>
+              <li>سطح دو</li>
+              <li>سطح دو</li>
+            </ul>
+          </ul>
+        </div>
+
+        <div class="container-md text-center" id="rez02">
+          <h3>تاریخ و ساعت لحظه‌ای:</h3>
+          <p id="datetime" style="font-size: 20px"></p>
+        </div>
+
+        <script>
+          function updateTime() {
+            const now = new Date();
+            const date = now.toLocaleDateString("fa-IR", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            });
+            const time = now.toLocaleTimeString("fa-IR");
+
+            document.getElementById("datetime").innerHTML = `${date} - ${time}`;
+          }
+
+          setInterval(updateTime, 1000);
+          updateTime();
+        </script>
       </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام  </div>
-      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و </div>
-      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد </div>
+      <div class="div01 p-sm-2">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button
+              class="nav-link active"
+              id="nav-home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-home"
+              type="button"
+              role="tab"
+              aria-controls="nav-home"
+              aria-selected="true"
+            >
+              منو 01
+            </button>
+            <button
+              class="nav-link"
+              id="nav-profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-profile"
+              type="button"
+              role="tab"
+              aria-controls="nav-profile"
+              aria-selected="false"
+            >
+              منو 02
+            </button>
+            <button
+              class="nav-link"
+              id="nav-contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-contact"
+              type="button"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+            >
+              منو 03
+            </button>
+          </div>
+        </nav>
+        <div
+          class="tab-content"
+          id="nav-tabContent"
+          style="
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+          "
+        >
+          <div
+            class="tab-pane fade show active"
+            id="nav-home"
+            role="tabpanel"
+            aria-labelledby="nav-home-tab"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
+            زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+            متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+            رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد
+            کرد، در این صورت می توان امید داشت که تمام
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-profile"
+            role="tabpanel"
+            aria-labelledby="nav-profile-tab"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-contact"
+            role="tabpanel"
+            aria-labelledby="nav-contact-tab"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
+            زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+            متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+            رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="/Project-02/lib/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
