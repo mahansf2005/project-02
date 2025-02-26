@@ -21,37 +21,37 @@
     >
       <div class="container m-0">
         <a class="navbar-brand" href="#">
-          <img src="/lib/img/logo.png" alt="profile-logo" width="50" />
+          <img src="/lib/img/logo.png" alt="profile-logo" width="35" />
         </a>
         <a class="navbar-brand" href="#">
-          <img src="/lib/img/profile.webp" alt="profile-logo" width="80" />
+          <img src="/lib/img/profile.webp" alt="profile-logo" width="60" />
         </a>
       </div>
     </nav>
-    <div class="d-flex " >
+    <div class="d-flex" id="div1">
       <div
         class="container-md bg-body-secondary d-flex flex-column justify-content-between"
         id="rez"
       >
         <div id="rez01">
           <ul>
-            <li>سطح یک</li>
-            <li>سطح یک</li>
-            <li>سطح یک</li>
-            <ul>
-              <li>سطح دو</li>
-              <li>سطح دو</li>
-              <li>سطح دو</li>
+            <li><a href="#" onclick="Showmenu(event,'/')">منوی یک</a></li>
+            <li><a href="#" onclick="Showmenu(event,'/')">منوی دو</a></li>
+            <li><a href="#" onclick="Showmenu(event,'/')">منوی سه</a></li>
+            <ul class="class-ul p-0">
+              <li><a href="#" onclick="Showmenu(event,'/')">منوی یک</a></li>
+              <li><a href="#" onclick="Showmenu(event,'/')">منوی دو</a></li>
+              <li><a href="#" onclick="Showmenu(event,'/')">منوی سه</a></li>
             </ul>
           </ul>
           <ul>
-            <li>سطح یک</li>
-            <li>سطح یک</li>
-            <li>سطح یک</li>
-            <ul>
-              <li>سطح دو</li>
-              <li>سطح دو</li>
-              <li>سطح دو</li>
+            <li><a href="#" onclick="Showmenu(event,'/')">منوی یک</a></li>
+            <li><a href="#" onclick="Showmenu(event,'/')">منوی دو</a></li>
+            <li><a href="#" onclick="Showmenu(event,'/')">منوی سه</a></li>
+            <ul class="class-ul p-0">
+              <li><a href="#" onclick="Showmenu(event,'/')">منوی یک </a></li>
+              <li><a href="#" onclick="Showmenu(event,'/')">منوی دو </a></li>
+              <li><a href="#" onclick="Showmenu(event,'/')">منوی سه </a></li>
             </ul>
           </ul>
         </div>
@@ -77,6 +77,38 @@
 
           setInterval(updateTime, 1000);
           updateTime();
+
+          // 📌 تابع برای تغییر مسیر بدون رفرش
+          function Showmenu(event, path) {
+            event.preventDefault(); // جلوگیری از بارگذاری صفحه
+            history.pushState({}, "", path); // تغییر URL بدون رفرش
+            renderPage(); // بروزرسانی صفحه
+          }
+
+          // 📌 تابع برای نمایش محتوای مناسب
+          function renderPage() {
+            const path = window.location.pathname; // دریافت مسیر جاری
+            document
+              .querySelectorAll("#nav-tab > div")
+              .forEach((div) => div.classList.add("hidden"));
+
+            switch (path) {
+              case "/":
+                document.getElementById("about").classList.remove("hidden");
+                break;
+              case "/":
+                document.getElementById("contact").classList.remove("hidden");
+                break;
+              default:
+                document.getElementById("home").classList.remove("hidden");
+            }
+          }
+
+          // 📌 مدیریت دکمه‌های Back/Forward مرورگر
+          window.addEventListener("popstate", renderPage);
+
+          // 📌 اجرای تابع در بارگذاری صفحه
+          renderPage();
         </script>
       </div>
       <div class="div01 p-sm-2">

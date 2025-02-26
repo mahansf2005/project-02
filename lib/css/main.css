@@ -8,23 +8,74 @@
     max-width: 100%;
 
 }
+#nav-tab , #nav-home {
+    display: none;
+}
+.tab-pane{
+    display: none;
+}
+.navbar{
+    height: 5.6vh;
+    padding: 0;
+}
 #rez02{
-    width: 200px !important;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    text-align: center !important;
 }
 #rez02 p{
-    width: 200px !important;
-    font-size: 16px !important;
+    width: 100% !important;
+    font-size: 15px !important;
 }
 #rez02 h3{
-    width: 200px !important;
+    width: 100% !important;
     font-size: 20px;
 }
 #rez01{
-    height: 1000px;
+    height: 500px;
+    padding-top: 20px;
+}
+#rez01 ul{
+    width: 100%;
+    padding: 0px ;
+
+}
+#rez01 ul li{
+    width: 100% !important;
+    list-style-type: none;
+    
+}
+#rez01 ul li a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 0px 15px 0px 0px;
+    color: black;
+}
+#rez01 ul li a:hover{
+    background-color: black;
+    color: white;
+}
+#rez01 .class-ul li a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 0px 40px 0px 0px;
+}
+#rez01 .class-ul{
+    margin-top:20px ;
 }
 #rez{
    width: 1000px;
-   height: 833px;
+   height: 94.4vh !important;
+   padding: 0;
+   margin: 0;
+}
+#div1{
+    justify-content: start;
+    margin: 0;
 }
 #rez div{
     width: 100%;
