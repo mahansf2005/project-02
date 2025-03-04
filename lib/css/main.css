@@ -1,86 +1,96 @@
 @import url(/lib/css/respansive.css);
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.navbar div{
-    max-width: 100%;
+.navbar div {
+  max-width: 100%;
+}
+#nav-tab,
+#nav-home {
+}
+.tab-pane {
+}
+.navbar {
+  height: 5.6vh;
+  padding: 0;
+}
+#rez02 {
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: center !important;
+}
+#rez02 p {
+  width: 100% !important;
+  font-size: 15px !important;
+}
+#rez02 h3 {
+  width: 100% !important;
+  font-size: 20px;
+}
+#rez01 {
+  height: 500px;
+  padding-top: 20px;
+}
+#rez01 ul {
+  width: 100%;
+  padding: 0px;
+}
+#rez01 ul li {
+  width: 100% !important;
+  list-style-type: none;
+}
+#rez01 ul li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 0px 15px 0px 0px;
+  color: black;
+}
+#rez01 ul li a:hover {
+  background-color: black;
+  color: white;
+}
+#rez01 .class-ul li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 0px 40px 0px 0px;
+}
+#rez01 .class-ul {
+  margin-top: 20px;
+}
+#rez {
+  width: 1000px !important;
+  height: 94.4vh !important;
+  padding: 0;
+  margin: 0;
+}
+#div1 {
+  justify-content: start;
+  margin: 0;
+}
+#rez div {
+  width: 100%;
+}
+body,
+html {
+  font-family: "Vazirmatn";
+}
+#nav-tabContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 
+.div01 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
-#nav-tab , #nav-home {
-    display: none;
-}
-.tab-pane{
-    display: none;
-}
-.navbar{
-    height: 5.6vh;
-    padding: 0;
-}
-#rez02{
-    width: 100% !important;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    text-align: center !important;
-}
-#rez02 p{
-    width: 100% !important;
-    font-size: 15px !important;
-}
-#rez02 h3{
-    width: 100% !important;
-    font-size: 20px;
-}
-#rez01{
-    height: 500px;
-    padding-top: 20px;
-}
-#rez01 ul{
-    width: 100%;
-    padding: 0px ;
-
-}
-#rez01 ul li{
-    width: 100% !important;
-    list-style-type: none;
-    
-}
-#rez01 ul li a{
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    padding: 0px 15px 0px 0px;
-    color: black;
-}
-#rez01 ul li a:hover{
-    background-color: black;
-    color: white;
-}
-#rez01 .class-ul li a{
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    padding: 0px 40px 0px 0px;
-}
-#rez01 .class-ul{
-    margin-top:20px ;
-}
-#rez{
-   width: 1000px;
-   height: 94.4vh !important;
-   padding: 0;
-   margin: 0;
-}
-#div1{
-    justify-content: start;
-    margin: 0;
-}
-#rez div{
-    width: 100%;
-    
-}
-body{
-    font-family: 'Vazirmatn';
+#nav-home {
+  overflow-y: scroll;
 }
