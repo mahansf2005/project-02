@@ -1,86 +1,92 @@
 @import url(/lib/css/respansive.css);
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.navbar div{
-    max-width: 100%;
-
+.navbar div {
+  max-width: 100%;
 }
-#nav-tab , #nav-home {
-    display: none;
+.navbar {
+  height: 5.6vh;
+  padding: 0;
 }
-.tab-pane{
-    display: none;
+#rez02 {
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: center !important;
 }
-.navbar{
-    height: 5.6vh;
-    padding: 0;
+#rez02 p {
+  width: 100% !important;
+  font-size: 15px !important;
 }
-#rez02{
-    width: 100% !important;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    text-align: center !important;
+#rez02 h3 {
+  width: 100% !important;
+  font-size: 20px;
 }
-#rez02 p{
-    width: 100% !important;
-    font-size: 15px !important;
+#rez01 {
+  height: 500px;
+  padding-top: 20px;
 }
-#rez02 h3{
-    width: 100% !important;
-    font-size: 20px;
+#rez01 ul {
+  width: 100%;
+  padding: 0px;
 }
-#rez01{
-    height: 500px;
-    padding-top: 20px;
+#rez01 ul li {
+  width: 100% !important;
+  list-style-type: none;
 }
-#rez01 ul{
-    width: 100%;
-    padding: 0px ;
-
+#rez01 ul li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 0px 15px 0px 0px;
+  color: black;
 }
-#rez01 ul li{
-    width: 100% !important;
-    list-style-type: none;
-    
+#rez01 ul li a:hover {
+  background-color: black;
+  color: white;
 }
-#rez01 ul li a{
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    padding: 0px 15px 0px 0px;
-    color: black;
+#rez01 .class-ul li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 0px 40px 0px 0px;
 }
-#rez01 ul li a:hover{
-    background-color: black;
-    color: white;
+#rez01 .class-ul {
+  margin-top: 20px;
 }
-#rez01 .class-ul li a{
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    padding: 0px 40px 0px 0px;
+#rez {
+  width: 1000px !important;
+  height: 94.4vh !important;
+  padding: 0;
+  margin: 0;
 }
-#rez01 .class-ul{
-    margin-top:20px ;
+#div1 {
+  justify-content: start;
+  margin: 0;
 }
-#rez{
-   width: 1000px;
-   height: 94.4vh !important;
-   padding: 0;
-   margin: 0;
+#rez div {
+  width: 100%;
 }
-#div1{
-    justify-content: start;
-    margin: 0;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Vazirmatn";
+  height: 100%;
 }
-#rez div{
-    width: 100%;
-    
+#nav-tabContent {
 }
-body{
-    font-family: 'Vazirmatn';
+.div01 {
+  flex: 1 1;
+}
+.tab-pane {
+  overflow-y: scroll;
+  height: 88vh;
+  padding: 20px;
+  text-align: justify;
+  font-family: "Vazirmatn";
 }

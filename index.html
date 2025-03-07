@@ -16,67 +16,102 @@
     />
   </head>
   <body>
-    <nav
-      class="navbar bg-body-secondary justify-content-md-between border-bottom border-black border-2"
-    >
-      <div class="container m-0">
-        <a class="navbar-brand" href="#">
-          <img src="/lib/img/logo.png" alt="profile-logo" width="35" />
-        </a>
-        <a class="navbar-brand" href="#">
-          <img src="/lib/img/profile.webp" alt="profile-logo" width="60" />
-        </a>
-      </div>
-    </nav>
-    <div class="d-flex" id="div1">
-      <div
-        class="container-md bg-body-secondary d-flex flex-column justify-content-between"
-        id="rez"
+    <div style="height: 100vh">
+      <nav
+        class="navbar bg-body-secondary justify-content-md-between border-bottom border-black border-2"
       >
-        <div id="rez01">
-          <ul>
-            <li><a href="#" onclick="Showmenu(event,'/')">منوی یک</a></li>
-            <li><a href="#" onclick="Showmenu(event,'/')">منوی دو</a></li>
-            <li><a href="#" onclick="Showmenu(event,'/')">منوی سه</a></li>
-            <ul class="class-ul p-0">
+        <div class="container m-0">
+          <a class="navbar-brand" href="#">
+            <img src="/lib/img/logo.png" alt="profile-logo" width="35" />
+          </a>
+          <a class="navbar-brand" href="#">
+            <img src="/lib/img/profile.webp" alt="profile-logo" width="60" />
+          </a>
+        </div>
+      </nav>
+      <div class="d-flex" id="div1">
+        <div
+          class="container-md bg-body-secondary d-flex flex-column justify-content-between"
+          id="rez"
+        >
+          <div id="rez01">
+            <ul>
               <li><a href="#" onclick="Showmenu(event,'/')">منوی یک</a></li>
               <li><a href="#" onclick="Showmenu(event,'/')">منوی دو</a></li>
               <li><a href="#" onclick="Showmenu(event,'/')">منوی سه</a></li>
+              <ul class="class-ul p-0">
+                <li><a href="#" onclick="Showmenu(event,'/')">منوی یک</a></li>
+                <li><a href="#" onclick="Showmenu(event,'/')">منوی دو</a></li>
+                <li><a href="#" onclick="Showmenu(event,'/')">منوی سه</a></li>
+              </ul>
             </ul>
-          </ul>
-          <ul>
-            <li><a href="#" onclick="Showmenu(event,'/')">منوی یک</a></li>
-            <li><a href="#" onclick="Showmenu(event,'/')">منوی دو</a></li>
-            <li><a href="#" onclick="Showmenu(event,'/')">منوی سه</a></li>
-            <ul class="class-ul p-0">
-              <li><a href="#" onclick="Showmenu(event,'/')">منوی یک </a></li>
-              <li><a href="#" onclick="Showmenu(event,'/')">منوی دو </a></li>
-              <li><a href="#" onclick="Showmenu(event,'/')">منوی سه </a></li>
+            <ul>
+              <li><a href="#" onclick="Showmenu(event,'/')">منوی یک</a></li>
+              <li><a href="#" onclick="Showmenu(event,'/')">منوی دو</a></li>
+              <li><a href="#" onclick="Showmenu(event,'/')">منوی سه</a></li>
+              <ul class="class-ul p-0">
+                <li><a href="#" onclick="Showmenu(event,'/')">منوی یک </a></li>
+                <li><a href="#" onclick="Showmenu(event,'/')">منوی دو </a></li>
+                <li><a href="#" onclick="Showmenu(event,'/')">منوی سه </a></li>
+              </ul>
             </ul>
-          </ul>
-        </div>
+          </div>
 
-        <div class="container-md text-center" id="rez02">
-          <h3>تاریخ و ساعت لحظه‌ای:</h3>
-          <p id="datetime" style="font-size: 20px"></p>
-        </div>
+          <div class="container-md text-center" id="rez02">
+            <h3>تاریخ و ساعت لحظه‌ای:</h3>
+            <p id="datetime" style="font-size: 20px"></p>
+          </div>
 
-        <script>
-          function updateTime() {
-            const now = new Date();
-            const date = now.toLocaleDateString("fa-IR", {
-              weekday: "long",
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            });
-            const time = now.toLocaleTimeString("fa-IR");
+          <script>
+            function updateTime() {
+              const now = new Date();
+              const date = now.toLocaleDateString("fa-IR", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              });
+              const time = now.toLocaleTimeString("fa-IR");
 
-            document.getElementById("datetime").innerHTML = `${date} - ${time}`;
-          }
+              document.getElementById(
+                "datetime"
+              ).innerHTML = `${date} - ${time}`;
+            }
 
           setInterval(updateTime, 1000);
           updateTime();
+
+          // 📌 تابع برای تغییر مسیر بدون رفرش
+          function Showmenu(event, path) {
+            event.preventDefault(); // جلوگیری از بارگذاری صفحه
+            history.pushState({}, "", path); // تغییر URL بدون رفرش
+            renderPage(); // بروزرسانی صفحه
+          }
+
+          // 📌 تابع برای نمایش محتوای مناسب
+          function renderPage() {
+            const path = window.location.pathname; // دریافت مسیر جاری
+            document
+              .querySelectorAll("#nav-tab > div")
+              .forEach((div) => div.classList.add("hidden"));
+
+            switch (path) {
+              case "/":
+                document.getElementById("about").classList.remove("hidden");
+                break;
+              case "/":
+                document.getElementById("contact").classList.remove("hidden");
+                break;
+              default:
+                document.getElementById("home").classList.remove("hidden");
+            }
+          }
+
+          // 📌 مدیریت دکمه‌های Back/Forward مرورگر
+          window.addEventListener("popstate", renderPage);
+
+          // 📌 اجرای تابع در بارگذاری صفحه
+          renderPage();
         </script>
       </div>
       <div class="div01 p-sm-2">
