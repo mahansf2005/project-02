@@ -81,16 +81,14 @@
             setInterval(updateTime, 1000);
             updateTime();
 
-            // 📌 تابع برای تغییر مسیر بدون رفرش
             function Showmenu(event, path) {
-              event.preventDefault(); // جلوگیری از بارگذاری صفحه
-              history.pushState({}, "", path); // تغییر URL بدون رفرش
-              renderPage(); // بروزرسانی صفحه
+              event.preventDefault(); 
+              history.pushState({}, "", path); 
+              renderPage(); 
             }
 
-            // 📌 تابع برای نمایش محتوای مناسب
             function renderPage() {
-              const path = window.location.pathname; // دریافت مسیر جاری
+              const path = window.location.pathname; 
               document
                 .querySelectorAll("#nav-tab > div")
                 .forEach((div) => div.classList.add("hidden"));
@@ -107,10 +105,8 @@
               }
             }
 
-            // 📌 مدیریت دکمه‌های Back/Forward مرورگر
             window.addEventListener("popstate", renderPage);
 
-            // 📌 اجرای تابع در بارگذاری صفحه
             renderPage();
           </script>
         </div>
